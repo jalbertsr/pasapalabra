@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pasapalabra</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<h1 id="title1">Pasa</h1>
+		<h1 id="title2">palabra</h1>
+	</header>
+	<div id="maindiv">
+		<div id="a" class="circle">A</div>
+		<div id="b" class="circle">B</div>
+		<div id="c" class="circle">C</div>
+		<div id="d" class="circle">D</div>
+		<div id="e" class="circle">E</div>
+		<div id="f" class="circle">F</div>
+		<div id="g" class="circle">G</div>
+		<div id="h" class="circle">H</div>
+		<div id="i" class="circle">I</div>
+		<div id="j" class="circle">J</div>
+		<div id="k" class="circle">K</div>
+		<div id="l" class="circle">L</div>
+		<div id="m" class="circle">M</div><br>
+		<div id="n" class="circle">N</div>
+		<div id="o" class="circle">O</div>
+		<div id="p" class="circle">P</div>
+		<div id="q" class="circle">Q</div>
+		<div id="r" class="circle">R</div>
+		<div id="s" class="circle">S</div>
+		<div id="t" class="circle">T</div>
+		<div id="u" class="circle">U</div>
+		<div id="v" class="circle">V</div>
+		<div id="w" class="circle">W</div>
+		<div id="x" class="circle">X</div>
+		<div id="y" class="circle">Y</div>
+		<div id="z" class="circle">Z</div>
+	</div>
+	<button id="start" onclick="newGame()">START</button>
+	<div id="level1">
+		<div id="quest">
+			<p id="questTitle">Pregunta:</p>
+			<p id="quest1"></p>
+		</div>
+		<div id="time">
+			<p id="time1">130</p>
+		</div>
+	</div><br>
+	<div id="level2"> 
+	<div id="divanswer"> 
+			<form id="form">
+				<input id="answer" type="text" placeholder="Pasapalabra" onkeypress="enter(event)">
+				<input id ="submit" type="button" value="Submit" onclick="getAnswer()">	
+			</form>
+		</div>
+		<div id="points">
+			<p id="points1">0</p>
+		</div>
+	</div>
+	<!-- ================= modals =============== -->
+	<div id="modalTime" class="modal">
+	  <div class="modal-content2">
+	    <span class="close">&times;</span><br>
+	    <h3>Game Over!</h3><br>
+	    <p>Ranking:</p>
+	    <ul id="list">
+	    </ul>
+	    <br>
+	    <p id="total"></p>
+	    <button id="playAgain" onclick="playAgain()">Play Again</button>
+	  </div>
+	</div>
+
+	<div id="modalStart" class="modal2">
+		<div class="modal-content1">
+			<h3>Bienvenido al Pasapalabra de SkyLab!</h3><br>
+			<p>Tienes 130 segundos para completar todas las definiciones!</p>
+			<p>Para pasar palabra deja en blanco el espacio de respuesta. El juego comenzará cuando hagas click en el botón START.</p>
+			<p>Buena Suerte!</p><br>		
+			<p>Introduce tu nombre de usuario:</p>
+			<input id="username" type="text" placeholder="Username">
+			<button id="submitName">Submit</button> 
+		</div>
+	</div>
+
+	<script type="text/javascript" src="app/app.js"></script>
+</body>
+<footer>
+	<div class="wrapper">
+        <p>Made with <span class="fa fa-heart footer-icon"></span> at <a href="http://www.skylabcoders.com/">Skylab Coders Academy</a>
+        </p>
+    </div>
+</footer>
+</html>
